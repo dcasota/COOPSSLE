@@ -1,0 +1,41 @@
+Coop Scanlet für Suse Linux Enterprise (CoopSSLE)
+-------------------------------------------------
+
+WISHLIST
+Die Wishlist enthält eine in verschiedene Bereiche unterteilte Liste mit Features(<>Bugs!), welche von Coop gewünscht werden.
+
+
+Business
+--------
+17.03.2009 DCA: PRIO x: Statt IP-Liste Link auf Sourcefiles mit Auslesen der notwendigen Daten
+
+Security
+--------
+17.03.2009 DCA: PRIO x: Passwort-Echo bei Passworthandhabung mit Expect-Methode ausschalten
+
+
+Stabilität
+----------
+-
+
+
+Performance
+-----------
+-
+
+Protokollierung
+---------------
+17.03.2009 DCA: PRIO x: Automatische Protokollierung des rsync-Ergebnisses (mit rsync version 3.04 gibt's den Parameter --log-file)
+
+
+Usability
+---------
+-
+
+
+Codequalität
+---------
+21.03.2009 DCA: PRIO x: Konsequente Unterscheidung zwischen globalen und lokalen Variablen
+
+
+

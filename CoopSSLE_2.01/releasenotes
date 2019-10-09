@@ -1,0 +1,167 @@
+Coop Scanlet für Suse Linux Enterprise (CoopSSLE)
+-------------------------------------------------
+
+RELEASENOTES
+Das CoopSSLE wird anhand des scanletstarter.sh-Skripts versioniert.
+
+
+-------------------------------------------------------------------------------------------------------------------------------
+V2.0§
+-------------------------------------------------------------------------------------------------------------------------------
+Datum:		25.08.2009
+Autor:		Daniel Casota (DCA), daniel.casota@intersolutions.ch, InterSolutions GmbH, www.intersolutions.ch
+
+Features:
+- Einmalstart-Check
+- Mehr Infos bei debug=1
+
+Bugfixes:
+- Die folgende Kombination lässt sich als cron-job starten: authentication_type=ssh_rsa_key/remote_start_method=cron/remote_su_method=sudo
+  Alle anderen Kombinationen sind nicht für cron-Jobs auf den distr-Server supported.
+
+Known issues:
+-
+
+-------------------------------------------------------------------------------------------------------------------------------
+
+
+-------------------------------------------------------------------------------------------------------------------------------
+V2.00
+-------------------------------------------------------------------------------------------------------------------------------
+Datum:		08.08.2009
+Autor:		Daniel Casota (DCA), daniel.casota@intersolutions.ch, InterSolutions GmbH, www.intersolutions.ch
+
+Features:
+- Redesign mittels separatem remotemanager.sh: Dadurch kann Authentifizierung (expect, rsa), Remote-Start (direkt oder cron)
+und Remote-Su-Methode (sudo oder expect) ausgewählt werden.
+- Auslagerung von Konfigurationsparameter in separates bash-Skript: scanletcfg.sh
+- Durch den verbindungsaufbau mittels Zertifikaten lässt sich ein Scanlet nun auch per cron starten.
+- Versionierung der Logs
+
+Bugfixes:
+Scanlet mittels Zertifikaten funktioniert nun (authentication_type=ssh_rsa_key. Die vorgängige Erstellung und Verteilung
+erfolgt mittels authentication_type=expect_create_new_ssh_rsa_key).
+
+Known issues:
+Das CoopSSLE lässt sich aufgrund der expect-Methode bei der Passworthandhabung nicht als cron-job starten.
+
+-------------------------------------------------------------------------------------------------------------------------------
+
+
+-------------------------------------------------------------------------------------------------------------------------------
+V1.4
+-------------------------------------------------------------------------------------------------------------------------------
+Datum:		29.07.2009
+Autor:		Daniel Casota (DCA), daniel.casota@intersolutions.ch, InterSolutions GmbH, www.intersolutions.ch
+
+Features:
+Erstellen und Verteilen von Zertifikaten create_ssh_rsa
+
+Bugfixes:
+Zertifikatloses Verteilen (expectless) funktioniert noch nicht.
+
+Known issues:
+Das CoopSSLE lässt sich aufgrund der expect-Methode bei der Passworthandhabung noch nicht als cron-job starten.
+
+-------------------------------------------------------------------------------------------------------------------------------
+
+
+-------------------------------------------------------------------------------------------------------------------------------
+V1.3
+-------------------------------------------------------------------------------------------------------------------------------
+Datum:		23.07.2009
+Autor:		Daniel Casota (DCA), daniel.casota@intersolutions.ch, InterSolutions GmbH, www.intersolutions.ch
+
+Features:
+Mail-Funktionalität hinzugefügt
+Scanletname wird nun dynamisch erstellt
+
+Bugfixes:
+-
+
+Known issues:
+Das CoopSSLE lässt sich aufgrund der expect-Methode bei der Passworthandhabung noch nicht als cron-job starten.
+
+-------------------------------------------------------------------------------------------------------------------------------
+
+
+-------------------------------------------------------------------------------------------------------------------------------
+V1.2
+-------------------------------------------------------------------------------------------------------------------------------
+Datum:		21.03.2009
+Autor:		Daniel Casota (DCA), daniel.casota@intersolutions.ch, InterSolutions GmbH, www.intersolutions.ch
+
+Features:
+scanletjob.sh wird nun direkt als root gestartet
+
+Bugfixes:
+Info_MachineBUSY wird nun korrekt detektiert und gesetzt
+
+Known issues:
+Das CoopSSLE lässt sich aufgrund der expect-Methode bei der Passworthandhabung noch nicht als cron-job starten.
+
+-------------------------------------------------------------------------------------------------------------------------------
+V1.1
+-------------------------------------------------------------------------------------------------------------------------------
+Datum:		19.03.2009
+Autor:		Daniel Casota (DCA), daniel.casota@intersolutions.ch, InterSolutions GmbH, www.intersolutions.ch
+
+Features:
+Check für root privilege beim Start des scanletstarter.sh eingebaut
+
+Bugfixes:
+
+Known issues:
+Das CoopSSLE lässt sich aufgrund der expect-Methode bei der Passworthandhabung noch nicht als cron-job starten.
+
+
+-------------------------------------------------------------------------------------------------------------------------------
+V1.0
+-------------------------------------------------------------------------------------------------------------------------------
+Datum:		19.03.2009
+Autor:		Daniel Casota (DCA), daniel.casota@intersolutions.ch, InterSolutions GmbH, www.intersolutions.ch
+
+Features:
+Durchgeführte Tests auf Coop Superbox SLE Server 10.
+
+Bugfixes:
+ping -c 1 [ipaddr] statt ping [ipaddr] -c 1
+rsync-Problem bei noch nicht vorhandenen Verzeichnisstrukturen
+
+Known issues:
+Das CoopSSLE lässt sich aufgrund der expect-Methode bei der Passworthandhabung noch nicht als cron-job starten.
+
+
+-------------------------------------------------------------------------------------------------------------------------------
+V0.9
+-------------------------------------------------------------------------------------------------------------------------------
+Datum:		17.03.2009
+Autor:		Daniel Casota (DCA), daniel.casota@intersolutions.ch, InterSolutions GmbH, www.intersolutions.ch
+
+Features:
+Das CoopSSLE wurde komplett überarbeitet. Gewisse, portierte Eigenheiten aus Windows wurden entfernt resp. vereinfacht.
+Sowohl Distributing, als auch Collecting sind möglich und es wird ein Errorlogfile geschrieben.
+Durchgeführte Tests auf VMs mit Open Suse 11.1.
+
+Bugfixes:
+
+Known issues:
+
+
+
+-------------------------------------------------------------------------------------------------------------------------------
+V0.8
+-------------------------------------------------------------------------------------------------------------------------------
+Datum:		24.02.2009
+Autor:		Daniel Casota (DCA), daniel.casota@intersolutions.ch, InterSolutions GmbH, www.intersolutions.ch
+
+Features:
+Das slescanlet wird ab der Source der Windows-Version portiert. Alphastadium: Lediglich Distributing-Mode derzeit möglich.
+
+Bugfixes:
+
+Known issues:
+
+
+
+

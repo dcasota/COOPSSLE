@@ -1,0 +1,5 @@
+#!/bin/sh
+smtpserver=miraculix.simplehosting.ch
+smtpport=25
+sender=coopssle@intersolutions.ch
+
